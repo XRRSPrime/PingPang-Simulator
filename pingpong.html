@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>乒乓球赛制模拟器 - 可视化界面</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>乒乓球赛制模拟器</h1>
+        <p>交互式前端演示：比较 11 分制与 21 分制下的胜率模拟。</p>
+    </header>
+
+    <main>
+        <section id="pingpongSection" class="panel active">
+            <div class="card form-card">
+                <h3>模拟设置</h3>
+                <label>单分获胜概率 p：<span id="probabilityValue">0.70</span></label>
+                <input id="probabilitySlider" type="range" min="0.50" max="0.95" step="0.01" value="0.70" />
+                <label>模拟次数<input id="simulationCount" type="number" min="1000" max="2000000" value="50000" /></label>
+                <div class="button-row">
+                    <button id="btnSimulate11">模拟 11 分制</button>
+                    <button id="btnSimulate21">模拟 21 分制</button>
+                    <button id="btnCompareRules">比较赛制</button>
+                </div>
+            </div>
+
+            <div class="card output-card">
+                <h3>结果展示</h3>
+                <div id="simulationResult" class="result-panel"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>开发者：上海交通大学 大一学生</p>
+        <p>使用说明：在浏览器中直接打开此页面即可体验。</p>
+    </footer>
+
+    <script src="pingpong_app.js"></script>
+</body>
+</html>
